@@ -9,9 +9,19 @@ describe WaterCollector do
     end
 
     it "raises an exception for something other than a list of integers" do
-      expect { WaterCollector.new(["a", 1, 3]) }.to raise_error(WaterCollector::InvalidType)
+      expect { WaterCollector.new(["a", 1, 3]) }.to raise_error(WaterCollector::InvalidInput)
     end
   end
+
+  describe "count" do
+    describe "for lists with one or two elements" do
+      it "returns 0" do
+        collector = WaterCollector.new([10, 2])
+        expect(collector.count).to eq(0)
+      end
+    end
+  end
+
 end
 
 # input
