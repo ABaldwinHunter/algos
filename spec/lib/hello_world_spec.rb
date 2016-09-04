@@ -1,5 +1,5 @@
 require "spec_helper"
-# require "../../hello"
+require File.expand_path("lib/hello_world.rb")
 
 describe HelloWorld do
   describe "#speak" do

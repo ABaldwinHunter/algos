@@ -1,1 +1,1 @@
-Dir.glob("spec/**/*.rb").each(&method(:load))
+# $LOAD_PATH << '../../lib'
